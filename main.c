@@ -6,7 +6,7 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 20:52:28 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/10/26 14:12:37 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/26 15:24:41 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,11 @@ static void	check_file(char *file)
 		error_exit("Map file must have .ber extension");
 }
 
-void	error_exit(char *msg)
-{
-	ft_putstr_fd("Error\n", 2);
-	ft_putstr_fd(msg, 2);
-	ft_putstr_fd("\n", 2);
-	exit(1);
-}
-
 static void	begin_game(t_game *game, char *file)
 {
 	check_file(file);
+	game->map.grid =load_map_from_file(file);
+
 }
 int	main(int argc, char **argv)
 {

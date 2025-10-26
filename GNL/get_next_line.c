@@ -6,11 +6,11 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 18:06:57 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/09/01 10:54:48 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/26 16:54:20 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "so_long.h"
 #include <stdio.h>
 
 static char	*read_to_buffer(int fd, char *remainder)

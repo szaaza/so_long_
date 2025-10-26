@@ -6,11 +6,11 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 18:08:07 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/08/28 15:29:47 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/26 16:54:26 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "so_long.h"
 
 char	*ft_strchr(const char *s, int c)
 {
