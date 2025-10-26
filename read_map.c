@@ -6,7 +6,7 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 17:57:51 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/10/26 18:30:03 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/26 19:35:24 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ static int	get_file_line_count(const char *path)
 	close(fd);
 	return (lines);
 }
+
 
 char	**load_map_from_file(const char *path)
 {
