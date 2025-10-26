@@ -6,12 +6,11 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 20:52:28 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/10/26 15:24:41 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/26 19:23:00 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include "libft.h"
 
 static void	check_file(char *file)
 {

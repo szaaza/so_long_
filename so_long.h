@@ -6,7 +6,7 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 16:17:03 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/10/26 16:52:33 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/26 19:21:47 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ typedef struct s_game
     t_map	map;
 }	t_game;
 
-//updat the functions which is already in the so_long.h file
-
+//utils functions
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlen(const char *str);
 void	error_exit(char *msg);
 
 //get_next_line functions
@@ -52,5 +53,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_append(char *s1, char *s2, size_t len);
 
+//map functions
+char	**load_map_from_file(const char *path);
 
 #endif // SO_LONG_H
