@@ -6,7 +6,7 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 16:17:03 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/10/26 19:21:47 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/27 12:21:37 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct s_game
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *str);
 void	error_exit(char *msg);
+void	ft_putstr_fd(char *s, int fd);
 
 //get_next_line functions
 char	*get_next_line(int fd);

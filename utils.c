@@ -6,7 +6,7 @@
 /*   By: sazanjan <<sazanjan@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 21:52:04 by sazanjan          #+#    #+#             */
-/*   Updated: 2025/10/26 19:18:53 by sazanjan         ###   ########.fr       */
+/*   Updated: 2025/10/27 12:20:51 by sazanjan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,18 @@ size_t	ft_strlen(const char *str)
 		i++;
 	}
 	return (i);
+}
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	unsigned int	index;
+
+	if (!s)
+		return ;
+	index = 0;
+	while (s[index])
+	{
+		ft_putchar_fd(s[index], fd);
+		index++;
+	}
 }
