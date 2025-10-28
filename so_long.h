@@ -44,10 +44,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(const char *str);
 void	error_exit(char *msg);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ucheck(t_game *game);
+
 
 //get_next_line functions
 char	*get_next_line(int fd);
-size_t	ft_strlen(const char *s);
+// size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memmove(void *dst, const void *src, size_t len);

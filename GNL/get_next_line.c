@@ -98,17 +98,17 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
+// size_t	ft_strlen(const char *s)
+// {
+// 	size_t	len;
 
-	if (!s)
-		return (0);
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
+// 	if (!s)
+// 		return (0);
+// 	len = 0;
+// 	while (s[len])
+// 		len++;
+// 	return (len);
+// }
 
 // example:
 // -----------------

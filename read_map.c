@@ -36,6 +36,24 @@ static int	get_file_line_count(const char *path)
 	return (lines);
 }
 
+static char	**allocate_map_array(int line_count)
+{
+	char **map = malloc(sizeof(char *) * (line_count + 1));
+	if (!map)
+		error_exit("Memory allocation failed for map");
+	return (map);
+}
+static char	*make_a_(char *str)
+{
+	int	num;
+
+	if (!str)
+		return (NULL);
+	num = ft_strlen(str);
+	if (num > 0 && str[num - 1] == '\n')
+		str[num - 1] = '\0';
+	return (str);
+}
 
 char	**load_map_from_file(const char *path)
 {
@@ -43,11 +61,23 @@ char	**load_map_from_file(const char *path)
 	int		fd;
 	int		Mat;
 	int		line_numbers;
-	char	*b1;
+	char	*b;
 
 	line_numbers = get_file_line_count(path);
 	if (line_numbers == 0)
 		error_exit("Map file has no input! fill it...");
 
+	map = allocate_map_array(line_numbers);
+	fd = open_file(path);
+	Mat = 0;
+
+	while (Mat < line_numbers)
+	{
+		b = get_next_line(fd);
+		map[Mat] = make_a_(b);
+		Mat++;
+	}
+	map[Mat] = NULL;
+	close(fd);
 	return (map);
 }
