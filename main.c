@@ -27,7 +27,9 @@ static void	begin_game(t_game *game, char *file)
 {
 	check_file(file);
 	game->map.grid =load_map_from_file(file);
-	ucheck(game);
+	// ucheck(game);
+	validate_map(game);
+
 }
 int	main(int argc, char **argv)
 {

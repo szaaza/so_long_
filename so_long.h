@@ -60,4 +60,10 @@ char	*ft_append(char *s1, char *s2, size_t len);
 //map functions
 char	**load_map_from_file(const char *path);
 
+//map gardian functions
+int	validate_map(t_game *game);
+
+//map guardian helpers functions
+void	check_row_length(char **grid, int expected_len)
+
 #endif // SO_LONG_H

@@ -72,24 +72,24 @@ void	error_exit(char *msg)
 	ft_putstr_fd("\n", 2);
 	exit(1);
 }
-void	ucheck(t_game *game)
-{
-	int	i = 0;
+// void	ucheck(t_game *game)
+// {
+// 	int	i = 0;
 
-	printf(">>> Entered ucheck\n"); // Debug print
+// 	printf(">>> Entered ucheck\n"); // Debug print
 
-	if (!game->map.grid)
-	{
-		ft_putstr_fd("Map not loaded!\n", 1);
-		return;
-	}
+// 	if (!game->map.grid)
+// 	{
+// 		ft_putstr_fd("Map not loaded!\n", 1);
+// 		return;
+// 	}
 
-	ft_putstr_fd("=== MAP CHECK ===\n", 1);
-	while (game->map.grid[i])
-	{
-		ft_putstr_fd(game->map.grid[i], 1);
-		ft_putstr_fd("\n", 1);
-		i++;
-	}
-	ft_putstr_fd("=================\n", 1);
-}
+// 	ft_putstr_fd("=== MAP CHECK ===\n", 1);
+// 	while (game->map.grid[i])
+// 	{
+// 		ft_putstr_fd(game->map.grid[i], 1);
+// 		ft_putstr_fd("\n", 1);
+// 		i++;
+// 	}
+// 	ft_putstr_fd("=================\n", 1);
+// }

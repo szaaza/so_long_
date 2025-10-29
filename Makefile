@@ -11,15 +11,18 @@ RM			= rm -f
 # Files and directories
 # --------------------------------------------------------------------------- #
 
-SRC_DIR		= .
-GNL_DIR		= GNL
-MAP_DIR		= maps
+SRC_DIR			= .
+GNL_DIR			= GNL
+MAPCHECK_DIR	= map_validation
+MAP_DIR			= maps
 
 SRC			= $(SRC_DIR)/main.c \
 			  $(SRC_DIR)/read_map.c \
 			  $(SRC_DIR)/utils.c \
 			  $(GNL_DIR)/get_next_line.c \
 			  $(GNL_DIR)/get_next_line_utils.c
+			  $(MAPCHECK_DIR)/map_gardian.c \
+			  $(MAPCHECK_DIR)/map_gardian_helpers.c \
 
 OBJ			= $(SRC:.c=.o)
 
