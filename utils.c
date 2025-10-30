@@ -72,6 +72,8 @@ void	error_exit(char *msg)
 	ft_putstr_fd("\n", 2);
 	exit(1);
 }
+// ******************************************************************************
+// Ucheck function for input file check
 // void	ucheck(t_game *game)
 // {
 // 	int	i = 0;
@@ -93,3 +95,41 @@ void	error_exit(char *msg)
 // 	}
 // 	ft_putstr_fd("=================\n", 1);
 // }
+// ******************************************************************************
+//ucheck for map evaluation
+void	ucheck(t_game *game)
+{
+	int	i;
+
+	if (!game->map.grid)
+	{
+		ft_putstr_fd("❌ Map not loaded!\n", 1);
+		return;
+	}
+
+	ft_putstr_fd("🔍 Checking map validity...\n", 1);
+
+	// Print basic map info
+	printf("Map width: %d\n", game->map.width);
+	printf("Map height: %d\n", game->map.height);
+	printf("Collectibles: %d\n", game->map.collectibles);
+	printf("Player: (%d, %d)\n", game->map.player_x, game->map.player_y);
+	printf("Exit: (%d, %d)\n", game->map.exit_x, game->map.exit_y);
+
+	// Print the map grid
+	ft_putstr_fd("=== MAP GRID ===\n", 1);
+	i = 0;
+	while (game->map.grid[i])
+	{
+		ft_putstr_fd(game->map.grid[i], 1);
+		ft_putstr_fd("\n", 1);
+		i++;
+	}
+	ft_putstr_fd("=================\n", 1);
+
+	// Run validation
+	if (validate_map(game))
+		ft_putstr_fd("✅ Map is valid!\n", 1);
+	else
+		ft_putstr_fd("❌ Map is invalid!\n", 1);
+}

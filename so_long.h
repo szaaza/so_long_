@@ -73,4 +73,6 @@ void	check_row_length(char **grid, int expected_len);
 void	count_map_entities(t_game *game, int i, int j, int *p_count, int *e_count);
 void	validate_char(char c);
 
+// ucheck function for input file check
+
 #endif // SO_LONG_H

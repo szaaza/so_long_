@@ -62,8 +62,8 @@ int	validate_map(t_game *game)
 	check_rectangular(game);
 	check_characters(game);
 	locate_game_entities(game);
-	if (!check_path(game))
-		error_exit("No valid path in map");
+	// if (!check_path(game))
+	// 	error_exit("No valid path in map");
 
 	return (1);
 }

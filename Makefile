@@ -20,13 +20,13 @@ SRC			= $(SRC_DIR)/main.c \
 			  $(SRC_DIR)/read_map.c \
 			  $(SRC_DIR)/utils.c \
 			  $(GNL_DIR)/get_next_line.c \
-			  $(GNL_DIR)/get_next_line_utils.c
+			  $(GNL_DIR)/get_next_line_utils.c \
 			  $(MAPCHECK_DIR)/map_gardian.c \
 			  $(MAPCHECK_DIR)/map_gardian_helpers.c \
 
 OBJ			= $(SRC:.c=.o)
 
-MAP_FILE	= $(MAP_DIR)/map_valid.ber
+MAP_FILE	= $(MAP_DIR)/map_invalid.ber
 
 # --------------------------------------------------------------------------- #
 # Rules
