@@ -31,6 +31,11 @@ typedef struct s_map
 	char	**grid;
 	int		width;
 	int		height;
+	int		collectibles;
+	int		exit_x;
+	int		exit_y;
+	int		player_x;
+	int		player_y;
 }	t_map;
 
 
@@ -64,6 +69,8 @@ char	**load_map_from_file(const char *path);
 int	validate_map(t_game *game);
 
 //map guardian helpers functions
-void	check_row_length(char **grid, int expected_len)
+void	check_row_length(char **grid, int expected_len);
+void	count_map_entities(t_game *game, int i, int j, int *p_count, int *e_count);
+void	validate_char(char c);
 
 #endif // SO_LONG_H
