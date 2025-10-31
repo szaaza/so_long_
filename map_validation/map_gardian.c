@@ -8,12 +8,17 @@ static void	check_rectangular(t_game *game)
 	check_row_length(game->map.grid, expected_len);
 }
 
+static void	check_walls(t_game *game)
+{
+	check_horizontal_walls(game);
+	check_vertical_walls(game);
+}
 
 static void	check_characters(t_game *game)
 {
 	int	i;
 	int	j;
-
+	
 	i = 0;
 	while (game->map.grid[i])
 	{
@@ -62,9 +67,12 @@ int	validate_map(t_game *game)
 	check_rectangular(game);
 	check_characters(game);
 	locate_game_entities(game);
+	check_walls(game);
 	// if (!check_path(game))
 	// 	error_exit("No valid path in map");
 
 	return (1);
 }
+
+
 

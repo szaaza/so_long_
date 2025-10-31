@@ -72,6 +72,8 @@ int	validate_map(t_game *game);
 void	check_row_length(char **grid, int expected_len);
 void	count_map_entities(t_game *game, int i, int j, int *p_count, int *e_count);
 void	validate_char(char c);
+void	check_vertical_walls(t_game *game);
+void	check_horizontal_walls(t_game *game);
 
 // ucheck function for input file check
 

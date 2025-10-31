@@ -1,3 +1,15 @@
 
 errors.txt
 *.o
+so_long
+
+.DS_Store
+tests/
+.vscode/
+*.out
+*.dSYM/
+*.o
+*.a
+*.txt
+checker_Mac
+pipex
